@@ -12,14 +12,14 @@ import MovieGrid from "../MovieGrid/MovieGrid";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import MovieModal from "../MovieModal/MovieModal";
-function App() {
-  type ModuleWithDefault<T> = { default: T };
+type ModuleWithDefault<T> = { default: T };
 
-  const ReactPaginate = (
-    ReactPaginateModule as unknown as ModuleWithDefault<
-      ComponentType<ReactPaginateProps>
-    >
-  ).default;
+const ReactPaginate = (
+  ReactPaginateModule as unknown as ModuleWithDefault<
+    ComponentType<ReactPaginateProps>
+  >
+).default;
+function App() {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const [modal, setModal] = useState<Movie | null>(null);
